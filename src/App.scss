@@ -1,0 +1,456 @@
+:root {
+  // Color system
+  --text: white;
+  --gray-200: #b4b8bb;
+  --gray-300: #80868b;
+  --gray-500: #5f6368;
+  --gray-600: #444444;
+  --gray-700: #202020;
+  --gray-800: #171717;
+  --gray-900: #111111;
+  --gray-1000: #0a0a0a;
+  --border-stroke: #444444;
+
+  // Accent colors
+  --accent-blue: rgb(161, 228, 242);
+  --accent-blue-active-bg: #001233;
+  --accent-blue-active: #98beff;
+  --accent-blue-headers: #448dff;
+  --accent-green: rgb(168, 218, 181);
+  --accent-red: #ff4600;
+  
+  // Extended color palette
+  --midnight-blue: rgb(0, 18, 51);
+  --blue-30: #99beff;
+  
+  // Green shades
+  --Green-500: #0d9c53;
+  --Green-700: #025022;
+  
+  // Blue shades
+  --Blue-500: #1f94ff;
+  --Blue-800: #0f3557;
+  
+  // Red shades
+  --Red-400: #ff9c7a;
+  --Red-500: #ff4600;
+  --Red-600: #e03c00;
+  --Red-700: #bd3000;
+  
+  // Neutral palette
+  --Neutral-00: #000;
+  --Neutral-5: #181a1b;
+  --Neutral-10: #1c1f21;
+  --Neutral-15: #232729;
+  --Neutral-20: #2a2f31;
+  --Neutral-30: #404547;
+  --Neutral-50: #707577;
+  --Neutral-60: #888d8f;
+  --Neutral-80: #c3c6c7;
+  --Neutral-90: #e1e2e3;
+  
+  // Theme colors
+  --background: var(--gray-900);
+  --color: var(--text);
+  
+  // Font
+  --font-family: "Space Mono", monospace;
+  
+  // Scrollbar
+  scrollbar-color: var(--gray-600) var(--gray-900);
+  scrollbar-width: thin;
+}
+
+// Material Icons
+.material-symbols-outlined {
+  &.filled {
+    font-variation-settings:
+      "FILL" 1,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
+}
+
+// Base styles
+body {
+  font-family: var(--font-family);
+  background: var(--Neutral-5);
+  color: var(--Neutral-80);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+// App container
+.App {
+  min-height: 100vh;
+  background: var(--Neutral-5);
+}
+
+// Console layout
+.streaming-console {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--Neutral-5);
+  color: var(--gray-300);
+  width: 100%;
+  height: 100vh;
+
+  @media (min-width: 769px) {
+    flex-direction: row;
+  }
+
+  main {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 1rem;
+    overflow: hidden;
+    
+    @media (min-width: 769px) {
+      padding: 1rem;
+      gap: 2rem;
+    }
+  }
+
+  .main-app-area {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem;
+
+    @media (min-width: 769px) {
+      max-width: 1200px;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 1rem;
+    }
+  }
+
+  .function-call {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    overflow-y: auto;
+  }
+
+  a, a:visited, a:active {
+    color: var(--gray-300);
+  }
+
+  .disabled {
+    pointer-events: none;
+    > * {
+      pointer-events: none;
+    }
+  }
+}
+
+// App header
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background: var(--Neutral-10);
+
+  h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: var(--Neutral-80);
+    cursor: pointer;
+    padding: 0.5rem;
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+}
+
+// Navigation toggle
+.view-toggle {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: var(--Neutral-10);
+  border-radius: 16px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: 769px) {
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 24px;
+  }
+
+  button {
+    flex: 1;
+    min-width: auto;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--Neutral-15);
+    color: var(--Neutral-60);
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    @media (min-width: 769px) {
+      min-width: 120px;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+      border-radius: 16px;
+    }
+
+    &:hover {
+      background: var(--Neutral-20);
+    }
+
+    &.active {
+      background: var(--accent-blue-active-bg);
+      color: var(--accent-blue);
+    }
+  }
+}
+
+// Video stream
+.stream {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  background: var(--Neutral-10);
+  object-fit: cover;
+  flex-grow: 1;
+  max-height: fit-content;
+
+  @media (min-width: 769px) {
+    max-width: 640px;
+    border-radius: 16px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+// Google Sign In
+.google-sign-in {
+  .google-auth-container {
+    padding: 0.25rem;
+    background: var(--Neutral-10);
+    border-radius: 1rem;
+    
+    @media (min-width: 769px) {
+      padding: 0.5rem;
+      border-radius: 1.5rem;
+    }
+
+    button {
+      min-width: 100px;
+      padding: 0.5rem 1rem;
+      background: var(--Neutral-15);
+      color: var(--text);
+      border: none;
+      border-radius: 0.75rem;
+      font-family: var(--font-family);
+      font-size: 0.875rem;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(var(--Neutral-30), 0.3);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      
+      @media (min-width: 769px) {
+        min-width: 120px;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      &:hover {
+        background: var(--Neutral-20);
+      }
+    }
+  }
+}
+
+// Font styles
+.space-mono {
+  &-regular {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: normal;
+    
+    &-italic {
+      font-style: italic;
+    }
+  }
+  
+  &-bold {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-style: normal;
+    
+    &-italic {
+      font-style: italic;
+    }
+  }
+}
+
+// Utility classes
+.hidden {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.h-screen-full {
+  height: 100vh;
+}
+
+.w-screen-full {
+  width: 100%;
+}
+
+// Side Panel
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background: var(--Neutral-10);
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  @media (min-width: 769px) {
+    position: relative;
+    transform: none;
+    width: 250px;
+  }
+}
+
+// Ensure buttons are easily tappable on mobile
+button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+// Improve touch targets for interactive elements
+a, button, input, select, textarea {
+  touch-action: manipulation;
+}
+
+// Control Tray
+.control-tray {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background: var(--Neutral-10);
+  border-top: 1px solid var(--Neutral-30);
+  width: 100%;
+
+  @media (min-width: 769px) {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .app-header {
+    padding: 0;
+    background: transparent;
+  }
+
+  .app-header h1 {
+    display: none;
+  }
+
+  .main-app-area {
+    background: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    max-width: 100%;
+    padding: 6rem 2rem 2rem;
+  }
+
+  .stream {
+    max-width: 100%;
+    margin: 0;
+    grid-column: 1;
+  }
+
+  /* Calendar container - adjust the class name based on your calendar component's class */
+  .calendar-container {
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+  }
+
+  .view-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--Neutral-10);
+    padding: 0.5rem;
+    border-radius: 24px;
+    z-index: 1000;
+    width: auto;
+  }
+
+  .google-sign-in {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+  }
+
+  .control-tray {
+    background: transparent;
+    border-top: none;
+  }
+}
