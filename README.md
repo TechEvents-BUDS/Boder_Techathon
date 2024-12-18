@@ -7,7 +7,7 @@ We’ve built a super smart personal assistant using Gemini 2.0. It can understa
 ## Demo 🎥
 Check out our project demo video:
 
-[![Project Demo](https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge)]([YOUR_VIDEO_LINK_HERE](https://drive.google.com/file/d/1GjbZceU5Mcse7nLFLUJgHDEBY6JwOr03/view?usp=sharing))
+(https://drive.google.com/file/d/1GjbZceU5Mcse7nLFLUJgHDEBY6JwOr03/view?usp=sharing)
 
 ## Key Features
 - Feature 1: INTERACT WITH AUDIO IN DIFFERENT LANGUAGES
