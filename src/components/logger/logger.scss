@@ -1,0 +1,133 @@
+.logger {
+  color: var(--gray-300);
+  width: 100%;
+  max-width: 100%;
+  display: block;
+
+  .logger-list {
+    padding: 0 16px;
+    width: 100%;
+    list-style: none;
+  }
+
+  .user h4 {
+    color: var(--Green-500);
+  }
+
+  .model h4 {
+    color: var(--Blue-500);
+  }
+
+  .rich-log {
+    display: block;
+    gap: 4px;
+    width: 100%;
+
+    pre {
+      overflow-x: auto;
+      max-width: 100%;
+      white-space: pre-wrap;
+    }
+
+    h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 8px 0;
+      margin: 0;
+    }
+
+    h5 {
+      margin: 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--Neutral-20);
+    }
+
+    .part {
+      background: var(--Neutral-5);
+      padding: 14px;
+      margin-bottom: 4px;
+      color: var(--Neutral-90);
+      border-radius: 8px;
+      word-break: break-word;
+    }
+  }
+
+  .plain-log {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    
+    &>* {
+      padding-right: 4px;
+    }
+  }
+
+  .inline-code:not(:last-child) {
+    font-style: italic;
+
+    &::after {
+      content: ", ";
+    }
+  }
+}
+
+.logger li {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 0;
+  color: var(--Neutral-50, #707577);
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.logger li .timestamp {
+  width: 70px;
+  flex-shrink: 0;
+  color: var(--Neutral-50);
+}
+
+.logger li .source {
+  flex-shrink: 0;
+  font-weight: bold;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.logger li.source-server,
+.logger li.receive {
+  color: var(--Blue-500);
+}
+
+.logger li.source-client,
+.logger li.send:not(.source-server) {
+  color: var(--Green-500);
+}
+
+.logger li .count {
+  background-color: var(--Neutral-5);
+  font-size: 11px;
+  padding: 0.3em 0.5em;
+  line-height: 1;
+  border-radius: 8px;
+  color: var(--Blue-500);
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.logger li .message {
+  flex: 1;
+  min-width: 0;
+  color: var(--Neutral-50);
+  word-break: break-word;
+  
+  pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
