@@ -10,7 +10,7 @@ Check out our project demo video:
 [![Project Demo](https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge)]([YOUR_VIDEO_LINK_HERE](https://drive.google.com/file/d/1GjbZceU5Mcse7nLFLUJgHDEBY6JwOr03/view?usp=sharing))
 
 ## Key Features
-- Feature 1: INTERACT WITH DIFFERENT LANGUAGES
+- Feature 1: INTERACT WITH AUDIO IN DIFFERENT LANGUAGES
 - Feature 2: SHARE YOUR VIDEO, SHARE YOUR SCREEN.
 - Feature 3: BOOK EVENTS IN CALENDAR,ADD MEET LINK, DRAFT EMAILS, SEND EMAILS, SEARCH ON YOUTUBE
 
