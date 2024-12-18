@@ -1,34 +1,31 @@
 # Team Boder 🚀
 
 ## Project Overview
-Team Boder is an innovative project that [brief description of your project's purpose and key features].
+We’ve built a super smart personal assistant using Gemini 2.0. It can understand audio, video, images, and text. You can talk to it, share your video, or even show your screen, and it will help you right away. It can also schedule events, draft emails, add Meet links, and find videos on YouTube.
+
 
 ## Demo 🎥
 Check out our project demo video:
 
-[![Project Demo](https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge)](YOUR_VIDEO_LINK_HERE)
+[![Project Demo](https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge)]([YOUR_VIDEO_LINK_HERE](https://drive.google.com/file/d/1GjbZceU5Mcse7nLFLUJgHDEBY6JwOr03/view?usp=sharing))
 
 ## Key Features
-- Feature 1: [Describe a key feature]
-- Feature 2: [Describe another key feature]
-- Feature 3: [Describe another key feature]
-
-## Getting Started
-
-### Prerequisites
-- [List any required software]
-- [List any dependencies]
+- Feature 1: INTERACT WITH DIFFERENT LANGUAGES
+- Feature 2: SHARE YOUR VIDEO, SHARE YOUR SCREEN.
+- Feature 3: BOOK EVENTS IN CALENDAR,ADD MEET LINK, DRAFT EMAILS, SEND EMAILS, SEARCH ON YOUTUBE
 
 ### Installation
 1. Clone the repository
    ```
-   git clone https://github.com/your-username/team-boder.git
+   git clone https://github.com/TechEvents-BUDS/Boder_Techathon
    ```
 2. Install dependencies
    ```
    npm install
-   # or
-   pip install -r requirements.txt
+   ```
+3. Run Project
+   ```
+   npm start
    ```
 
 ## Usage
