@@ -1,0 +1,25 @@
+.google-auth-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  padding: 0.5rem;
+  background: var(--Neutral-10);
+  border-radius: 1.5rem;
+  
+  button {
+    min-width: 160px;
+    padding: 1rem 2rem;
+    background: var(--Neutral-15);
+    color: var(--text);  // Changed to white
+    border: none;
+    border-radius: 1rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    cursor: pointer;
+    
+    &:hover {
+      background: var(--Neutral-20);
+    }
+  }
+}
