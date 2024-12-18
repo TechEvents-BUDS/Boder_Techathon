@@ -16,7 +16,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-<<<<<<< HEAD
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -24,14 +23,6 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-=======
-import './index.css'; // Import global styles
-import App from './App'; // Import the main App component
-
-// Create a root element and render the App
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-
->>>>>>> 40f04af74c7dd996017be5c73f6b02495a21fd08
 root.render(
   <React.StrictMode>
     <App />

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useRef, useState } from "react";
 import "./App.scss";
 import { LiveAPIProvider } from "./contexts/LiveAPIContext";
@@ -92,25 +91,6 @@ const App: React.FC = () => {
           </div>
         </GoogleAuthProvider>
       </LiveAPIProvider>
-=======
-import React from 'react';
-
-const App: React.FC = () => {
-  return (
-    <div style={styles.container}>
-      <header style={styles.header}>
-        <h1>Welcome to My React TypeScript App</h1>
-        <p>This app is powered by React and TypeScript.</p>
-      </header>
-      <main style={styles.main}>
-        <button onClick={() => alert('Hello, world!')} style={styles.button}>
-          Click Me!
-        </button>
-      </main>
-      <footer style={styles.footer}>
-        <p>© 2024 Your App. All rights reserved.</p>
-      </footer>
->>>>>>> 40f04af74c7dd996017be5c73f6b02495a21fd08
     </div>
   );
 };
